@@ -1,0 +1,9 @@
+image: lade/haproxy:1.8
+build:
+  copy:
+    - haproxy.cfg
+  script:
+    - mv haproxy.cfg /usr/local/etc/haproxy
+deploy:
+  ports:
+    - 80
